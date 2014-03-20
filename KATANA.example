@@ -1,0 +1,23 @@
+kt_package(
+  name = "katana1",
+  version = "0.0.1",
+  release = "1",
+  description = "",
+  summary = "",
+  files = Map(
+    ("/manifest/BLADE_ROOT" -> ("BLADE_ROOT", "755")),
+    ("build.sbt" -> ("build.sbt", "644"))
+  )
+)
+
+kt_package(
+  name = "katana2",
+  version = "0.0.1",
+  release = "1",
+  description = "",
+  summary = "",
+  files = Map(
+    ("/manifest/BLADE_ROOT" -> ("BLADE_ROOT", "755")),
+    ("build.sbt" -> ("build.sbt", "644"))
+  )
+)

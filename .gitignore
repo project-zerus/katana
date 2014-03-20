@@ -2,3 +2,5 @@
 target
 .idea_modules
 .idea
+*rpm
+*tar.gz

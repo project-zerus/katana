@@ -300,9 +300,9 @@ declare -r real_script_path="$(realpath "$0")"
 declare -r app_home="$(realpath "$(dirname "$real_script_path")")"
 # TODO - Check whether this is ok in cygwin...
 declare -r lib_dir="$(realpath "${app_home}/../lib")"
-declare -r app_mainclass="im.chic.devtools.HeaderReplacer"
+declare -r app_mainclass="im.chic.devtools.KatanaApp"
 
-declare -r app_classpath="$lib_dir/co.zerus.katana.katana-0.1-SNAPSHOT.jar:$lib_dir/org.scala-lang.scala-library-2.10.3.jar:$lib_dir/com.github.scopt.scopt_2.10-3.2.0.jar:$lib_dir/com.google.guava.guava-16.0.1.jar:$lib_dir/org.redline-rpm.redline-1.1.15.jar:$lib_dir/org.apache.ant.ant-1.9.1.jar:$lib_dir/org.apache.ant.ant-launcher-1.9.1.jar:$lib_dir/org.slf4j.slf4j-log4j12-1.7.5.jar:$lib_dir/org.slf4j.slf4j-api-1.7.5.jar:$lib_dir/log4j.log4j-1.2.17.jar:$lib_dir/org.apache.commons.commons-compress-1.6.jar:$lib_dir/org.tukaani.xz-1.4.jar:$lib_dir/org.bouncycastle.bcpg-jdk15on-1.50.jar:$lib_dir/org.bouncycastle.bcprov-jdk15on-1.50.jar:$lib_dir/com.twitter.util-eval_2.10-6.13.0.jar:$lib_dir/com.twitter.util-core_2.10-6.13.0.jar:$lib_dir/org.scala-lang.scala-compiler-2.10.3.jar:$lib_dir/org.scala-lang.scala-reflect-2.10.3.jar"
+declare -r app_classpath="$lib_dir/co.zerus.katana.katana-0.1-SNAPSHOT.jar:$lib_dir/org.scala-lang.scala-library-2.10.3.jar:$lib_dir/org.apache.commons.commons-compress-1.8.jar:$lib_dir/org.tukaani.xz-1.5.jar:$lib_dir/org.apache.commons.commons-lang3-3.3.1.jar:$lib_dir/com.github.scopt.scopt_2.10-3.2.0.jar:$lib_dir/com.google.guava.guava-16.0.1.jar:$lib_dir/org.redline-rpm.redline-1.1.15.jar:$lib_dir/org.apache.ant.ant-1.9.1.jar:$lib_dir/org.apache.ant.ant-launcher-1.9.1.jar:$lib_dir/org.slf4j.slf4j-log4j12-1.7.5.jar:$lib_dir/org.slf4j.slf4j-api-1.7.5.jar:$lib_dir/log4j.log4j-1.2.17.jar:$lib_dir/org.bouncycastle.bcpg-jdk15on-1.50.jar:$lib_dir/org.bouncycastle.bcprov-jdk15on-1.50.jar:$lib_dir/com.twitter.util-eval_2.10-6.13.0.jar:$lib_dir/com.twitter.util-core_2.10-6.13.0.jar:$lib_dir/org.scala-lang.scala-compiler-2.10.3.jar:$lib_dir/org.scala-lang.scala-reflect-2.10.3.jar"
 
 declare -r java_cmd=$(get_java_cmd)
 
