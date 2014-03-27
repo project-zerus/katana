@@ -39,14 +39,15 @@ object KatanaUtils {
       }
       builder.addFile(prefix + "/" + fileName, sourceFile, fileMode.get)
     })
-    builder.build(katanaContext.workingDir)
+    builder.build(katanaContext.targetDir)
   }
 
   def buildTarball(katanaContext: KatanaContext, katana: Katana) {
     val closer = Closer.create
     try {
       val tarballPath = katana.name + ".tar.gz"
-      val fileOutputStream = closer.register(new FileOutputStream(new File(tarballPath)))
+      val fileOutputStream =
+        closer.register(new FileOutputStream(new File(katanaContext.targetDir, tarballPath)))
       val bufferedOutputStream = closer.register(new BufferedOutputStream(fileOutputStream))
       val gzOutputStream = closer.register(new GzipCompressorOutputStream(bufferedOutputStream))
       val tarOutputStream = closer.register(new TarArchiveOutputStream(gzOutputStream))

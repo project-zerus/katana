@@ -7,4 +7,6 @@ import java.io.File
  */
 class KatanaContext(val bladeRoot: File,
                     val workingDir: File,
-                    val katanaFileName: String)
+                    val katanaFileName: String) {
+  def targetDir = new File(workingDir, "target")
+}

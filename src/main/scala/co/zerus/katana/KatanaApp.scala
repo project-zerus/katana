@@ -3,6 +3,7 @@ package im.chic.devtools
 import java.io.File
 import co.zerus.katana.{KatanaUtils, KatanaContext, Katana}
 import org.apache.commons.lang3.StringUtils
+import scala.reflect.io.Directory
 
 /**
  * @author huahang
@@ -42,6 +43,8 @@ object KatanaApp extends App {
       println("KATANA file: " + config.katana)
 
       val katanaContext = new KatanaContext(bladeRoot.get, workingDir.get, config.katana)
+      new Directory(katanaContext.targetDir).deleteRecursively
+      katanaContext.targetDir.mkdirs
 
       Katana.parse(katanaFile.get).foreach(katana => {
         if (!StringUtils.isAlphanumeric(katana.name)) {
